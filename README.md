@@ -4,7 +4,7 @@ URL-RegEx 1.0
 A Regular Expression for catching URLs and extracting fragments out of them.
 
 ``` javascript
-RegEx = /\(?\b(?:(http|https|ftp):\/\/)?((?:www.)?[a-zA-Z0-9\-\.]+[\.][a-zA-Z]{2,4}|localhost(?=\/))(?::(\d*))?(?=[\s\/,\.\)])([\/]{1}[^\s\?]*[\/]{1})*(?:\/?([^\s\n\?\[\]\{\}\#]*(?:(?=\.)){1}|[^\s\n\?\[\]\{\}\.\#]*)?([\.]{1}[^\s\?\#]*)?)?(?:\?{1}([^\s\n\#\[\]\(\)]*))?([\#][^\s\n]*)?\)?/;
+RegEx = /\(?\b(?:(http|https|ftp):\/\/)?((?:www.)?[a-zA-Z0-9\-\.]+[\.][a-zA-Z]{2,4}|localhost(?=\/)|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::(\d*))?(?=[\s\/,\.\)])([\/]{1}[^\s\?]*[\/]{1})*(?:\/?([^\s\n\?\[\]\{\}\#]*(?:(?=\.)){1}|[^\s\n\?\[\]\{\}\.\#]*)?([\.]{1}[^\s\?\#]*)?)?(?:\?{1}([^\s\n\#\[\]\(\)]*))?([\#][^\s\n]*)?\)?/;
 ```
 
 Match this RegEx against a chunk of text, and catch any URL inside it.
@@ -18,7 +18,7 @@ It captures 8 groups (plus zero group that contains entire URL). If some of them
 
 * **$0** - **Entire URL** - url being parsed
 * **$1** - **Protocol** - http, https, ftp
-* **$2** - **Domain** - www.mydomain.com, mydomain.com, localhost...
+* **$2** - **Domain** - www.mydomain.com, mydomain.com, 127.0.0.1, localhost...
 * **$3** - **Port** - 80
 * **$4** - **Path / Folders** - /folder/dir/
 * **$5** - **Page / Filename** - eg. index
