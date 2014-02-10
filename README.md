@@ -1,5 +1,8 @@
-URL-RegEx 1.2
+URL-RegEx
 =============
+
+> v.1.2
+
 
 A Regular Expression for catching URLs and extracting fragments out of them.
 
