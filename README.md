@@ -17,9 +17,9 @@ You can check [JavaScript example](http://someweblog.com/url-regular-expression-
 
 ## URL fragments
 
-It captures 8 groups (plus zero group that contains entire URL). If some of them don’t exist in URL, that group will return empty.
+It captures 8 groups (plus the whole match that contains entire URL). If some of them don’t exist in URL, that group will return empty.
 
-* **$0** - **Entire URL** - url being parsed
+* **$&** - **Entire URL** - url being parsed
 * **$1** - **Protocol** - http, https, ftp
 * **$2** - **Userinfo** - username:password
 * **$3** - **Domain** - www.mydomain.com, mydomain.com, 127.0.0.1, localhost...
